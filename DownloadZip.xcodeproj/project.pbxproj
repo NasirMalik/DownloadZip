@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		502C25241717C409001D15D3 /* ioapi.c in Sources */ = {isa = PBXBuildFile; fileRef = 502C251A1717C409001D15D3 /* ioapi.c */; };
+		502C25251717C409001D15D3 /* mztools.c in Sources */ = {isa = PBXBuildFile; fileRef = 502C251C1717C409001D15D3 /* mztools.c */; };
+		502C25261717C409001D15D3 /* unzip.c in Sources */ = {isa = PBXBuildFile; fileRef = 502C251E1717C409001D15D3 /* unzip.c */; };
+		502C25271717C409001D15D3 /* zip.c in Sources */ = {isa = PBXBuildFile; fileRef = 502C25201717C409001D15D3 /* zip.c */; };
+		502C25281717C409001D15D3 /* ZipArchive.mm in Sources */ = {isa = PBXBuildFile; fileRef = 502C25231717C409001D15D3 /* ZipArchive.mm */; };
+		502C252C1717C5BB001D15D3 /* libz.1.2.5.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 502C252B1717C5BB001D15D3 /* libz.1.2.5.dylib */; };
 		503AB00D17172620000B5E83 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503AB00C17172620000B5E83 /* UIKit.framework */; };
 		503AB00F17172620000B5E83 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503AB00E17172620000B5E83 /* Foundation.framework */; };
 		503AB01117172620000B5E83 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 503AB01017172620000B5E83 /* CoreGraphics.framework */; };
@@ -21,6 +27,18 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		502C25191717C409001D15D3 /* crypt.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypt.h; sourceTree = "<group>"; };
+		502C251A1717C409001D15D3 /* ioapi.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = ioapi.c; sourceTree = "<group>"; };
+		502C251B1717C409001D15D3 /* ioapi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ioapi.h; sourceTree = "<group>"; };
+		502C251C1717C409001D15D3 /* mztools.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = mztools.c; sourceTree = "<group>"; };
+		502C251D1717C409001D15D3 /* mztools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = mztools.h; sourceTree = "<group>"; };
+		502C251E1717C409001D15D3 /* unzip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = unzip.c; sourceTree = "<group>"; };
+		502C251F1717C409001D15D3 /* unzip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = unzip.h; sourceTree = "<group>"; };
+		502C25201717C409001D15D3 /* zip.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = zip.c; sourceTree = "<group>"; };
+		502C25211717C409001D15D3 /* zip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = zip.h; sourceTree = "<group>"; };
+		502C25221717C409001D15D3 /* ZipArchive.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZipArchive.h; sourceTree = "<group>"; };
+		502C25231717C409001D15D3 /* ZipArchive.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ZipArchive.mm; sourceTree = "<group>"; };
+		502C252B1717C5BB001D15D3 /* libz.1.2.5.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.1.2.5.dylib; path = usr/lib/libz.1.2.5.dylib; sourceTree = SDKROOT; };
 		503AB00917172620000B5E83 /* DownloadZip.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DownloadZip.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		503AB00C17172620000B5E83 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		503AB00E17172620000B5E83 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -44,6 +62,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				502C252C1717C5BB001D15D3 /* libz.1.2.5.dylib in Frameworks */,
 				503AB00D17172620000B5E83 /* UIKit.framework in Frameworks */,
 				503AB00F17172620000B5E83 /* Foundation.framework in Frameworks */,
 				503AB01117172620000B5E83 /* CoreGraphics.framework in Frameworks */,
@@ -53,9 +72,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		502C25181717C409001D15D3 /* minizip */ = {
+			isa = PBXGroup;
+			children = (
+				502C25191717C409001D15D3 /* crypt.h */,
+				502C251A1717C409001D15D3 /* ioapi.c */,
+				502C251B1717C409001D15D3 /* ioapi.h */,
+				502C251C1717C409001D15D3 /* mztools.c */,
+				502C251D1717C409001D15D3 /* mztools.h */,
+				502C251E1717C409001D15D3 /* unzip.c */,
+				502C251F1717C409001D15D3 /* unzip.h */,
+				502C25201717C409001D15D3 /* zip.c */,
+				502C25211717C409001D15D3 /* zip.h */,
+			);
+			path = minizip;
+			sourceTree = "<group>";
+		};
 		503AB00017172620000B5E83 = {
 			isa = PBXGroup;
 			children = (
+				502C252B1717C5BB001D15D3 /* libz.1.2.5.dylib */,
 				503AB01217172620000B5E83 /* DownloadZip */,
 				503AB00B17172620000B5E83 /* Frameworks */,
 				503AB00A17172620000B5E83 /* Products */,
@@ -83,6 +119,9 @@
 		503AB01217172620000B5E83 /* DownloadZip */ = {
 			isa = PBXGroup;
 			children = (
+				502C25181717C409001D15D3 /* minizip */,
+				502C25221717C409001D15D3 /* ZipArchive.h */,
+				502C25231717C409001D15D3 /* ZipArchive.mm */,
 				503AB01B17172620000B5E83 /* AppDelegate.h */,
 				503AB01C17172620000B5E83 /* AppDelegate.m */,
 				503AB02417172620000B5E83 /* ViewController.h */,
@@ -176,6 +215,11 @@
 				503AB01917172620000B5E83 /* main.m in Sources */,
 				503AB01D17172620000B5E83 /* AppDelegate.m in Sources */,
 				503AB02617172620000B5E83 /* ViewController.m in Sources */,
+				502C25241717C409001D15D3 /* ioapi.c in Sources */,
+				502C25251717C409001D15D3 /* mztools.c in Sources */,
+				502C25261717C409001D15D3 /* unzip.c in Sources */,
+				502C25271717C409001D15D3 /* zip.c in Sources */,
+				502C25281717C409001D15D3 /* ZipArchive.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -296,6 +340,7 @@
 				503AB02E17172620000B5E83 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
